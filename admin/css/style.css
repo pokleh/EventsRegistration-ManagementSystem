@@ -1,0 +1,127 @@
+body
+	{
+		
+		width: 100%;
+		height: 100%;
+		background-color: white;
+		
+	}
+
+	*
+	{	
+	 	margin: 0px;
+	 	padding: 0px;
+	 	
+	}
+.navigation
+{
+	width:100%;
+	height:50px;
+	border:1px solid #cccccc;
+}
+.icon {
+	width:70px;
+	margin-left:10px;
+}
+.profile-name
+{
+	float:right;
+	margin-right:10px;
+	margin-top:10px;
+	color:gray;
+	text-decoration:none;
+}
+.profile-pic
+{
+	width:30px;
+	height:30px;
+	border-radius:100%; 
+}
+.notification
+{
+	float:right;
+	margin-right:10px;
+	margin-top:14px;
+	color:gray;
+}
+.logout
+{
+	float:right;
+	margin-right:15px;
+	margin-top:14px;
+	color:gray;
+}
+.calendar
+{
+	float:right;
+	margin-right:15px;
+	margin-top:14px;
+	color:gray;
+}
+.reminders
+{
+	border-right:1px solid #cccccc;
+	box-shadow:1px 1px 2px;
+}
+.reminder-header
+{
+width:100%;
+}
+.reminders-heading
+{
+	font-family: Helvetica Neue, Segoe UI, Helvetica, Arial, sans-serif;
+	font-size:18px;
+	color:#0084ff;
+	text-align: center;
+}
+.reminder-container
+{
+	width:100%;
+	height:512px;
+	margin-left:6px;
+	overflow:auto;
+}
+.view-reminder
+{
+	height: 512px;
+	overflow:auto;
+}
+.loading
+{
+	margin-top:200px;
+	display:none;
+}
+.loading-image
+{
+	width:50px;
+}
+.reminders-today
+{
+	border-left:1px solid #cccccc;
+	box-shadow:1px 1px 2px;
+
+}
+.deadline-header
+{
+	font-family: Helvetica Neue, Segoe UI, Helvetica, Arial, sans-serif;
+	font-size:18px;
+	color:#0084ff;
+}
+.alert-today
+{
+	margin-right:10px;
+}
+.reminder-today
+{
+	overflow:auto;
+	height:542px;
+}
+.view-reminder-intro
+{
+	text-align:center;
+	margin-top:150px;
+}
+.intro-heading
+{
+	font-family: Helvetica Neue, Segoe UI, Helvetica, Arial, sans-serif;
+}

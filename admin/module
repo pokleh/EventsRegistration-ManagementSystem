@@ -1,0 +1,14 @@
+1. To create a module where the office staff can manage the following: 
+1.1. Viewing and updating student’s information, instructor’s schedule 
+and enrollment booking. 
+1.2. Provide convenient and quick process of booking for costumers. 
+2. To integrate a GPS device to track training vehicle. 
+3. Generates report of daily income in different branches every month.
+
+
+
+The features that are available to the main administrator are: 
+1. The administrator can add, update and delete student records to the 
+database. 
+2. The system can provide more storage capacity and can give fast        
+access to the database. 
