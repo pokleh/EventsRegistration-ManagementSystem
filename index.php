@@ -5,7 +5,7 @@ session_start();
 include('php/connection.php');
 if(isset($_SESSION['user']))
 {
-	header("location:fabeventsdashboard");
+  header("location:fabeventsdashboard");
 }
 else if(isset($_SESSION['admin']))
 {
@@ -251,13 +251,13 @@ Services and Event Management</p>
         
         <!--================Offer Area =================-->
         <section class="offer_area p_120" id="explore">
-        	<div class="container">
-        		<div class="offer_title">
-        			<h5>What we offer for you</h5>
-        			<p>Fab events will make sure that every event must start and end with a bang!.</p>
-        		</div>
+          <div class="container">
+            <div class="offer_title">
+              <h5>What we offer for you</h5>
+              <p>Fab events will make sure that every event must start and end with a bang!.</p>
+            </div>
 
-        		<div class="row offer_inner">
+            <div class="row offer_inner">
 
 
                     <?php
@@ -270,9 +270,9 @@ Services and Event Management</p>
                      ?>
 
 
-        			<div class="col-lg-3">
-        				<div class="offer_item">
-        					 <?php if($row['eventCategory'] == "wedding") { ?>
+              <div class="col-lg-3">
+                <div class="offer_item">
+                   <?php if($row['eventCategory'] == "wedding") { ?>
                                 <img class="img-fluid mySlides" src="img/gallery/<?php echo $row['img'] ?>" alt="">
                            
                              <img class="mySlides" src="img/wedding/1.jpg" style="width:100%">
@@ -329,13 +329,13 @@ Services and Event Management</p>
                             <?php } ?>
 
 
-        					<div class="offer_text">
-        						<h4><?php echo $row['eventTitle'] ?></h4>
-        						
-        					   <br><a href="event?category=<?php echo $row['eventCategory'] ?>" class="genric-btn info-border">View more</a>
+                  <div class="offer_text">
+                    <h4><?php echo $row['eventTitle'] ?></h4>
+                    
+                     <br><a href="event?category=<?php echo $row['eventCategory'] ?>" class="genric-btn info-border">View more</a>
                             </div>
-        				</div>
-        			</div>
+                </div>
+              </div>
 
 
                         <?php } ?>
@@ -343,9 +343,9 @@ Services and Event Management</p>
 
 
 
-        			
-        		</div>
-        	</div>
+              
+            </div>
+          </div>
         </section>
         <!--================End Offer Area =================-->
         
@@ -353,14 +353,14 @@ Services and Event Management</p>
         
         <!--================Home Gallery Area =================-->
         <section class="home_gallery_area" id="completedevent">
-        	<div class="container-fluid">
-        		<div class="main_title">
-        			<h2>Our Recent Completed Events</h2>
-        			<p>Our memorable experience through creative events and planning</p>
-        		</div>
-        	</div>
-        	<div class="container">
-        		<div class="gallery_f_inner row imageGallery1">
+          <div class="container-fluid">
+            <div class="main_title">
+              <h2>Our Recent Completed Events</h2>
+              <p>Our memorable experience through creative events and planning</p>
+            </div>
+          </div>
+          <div class="container">
+            <div class="gallery_f_inner row imageGallery1">
                     <div class="col-lg-4 col-md-4 col-sm-6 brand manipul design print">
                         <div class="h_gallery_item">
                             <a href="completedevents?eventid=birthday">
@@ -392,8 +392,8 @@ Services and Event Management</p>
                         </div>
                         </a>
                     </div>
-        		
-        	</div>
+            
+          </div>
         </section>
 <br><br><br>
 
@@ -441,29 +441,29 @@ Services and Event Management</p>
         <!--================Home Contact Area =================-->
         <br><br>  <br><br>  <br><br>
         <section class="home_contact_area" id="sign-in">
-			<div class="left_img">
-				<img src="img/left-img.jpg" alt="">
-			</div>
-			<div class="h_right_form">
-				<div class="h_form_inner">
-					<h4>Sign in now <br>  and make Reservation</h4>
-					<form class="row home_contact_form" action="contact_process.php" method="post" id="contactForm" novalidate="novalidate">
-						<div class="form-group col-md-12">
-							<input type="text" class="form-control" id="username" name="username" placeholder="Username">
-						</div>
+      <div class="left_img">
+        <img src="img/left-img.jpg" alt="">
+      </div>
+      <div class="h_right_form">
+        <div class="h_form_inner">
+          <h4>Sign in now <br>  and make Reservation</h4>
+          <form class="row home_contact_form" action="contact_process.php" method="post" id="contactForm" novalidate="novalidate">
+            <div class="form-group col-md-12">
+              <input type="text" class="form-control" id="username" name="username" placeholder="Username">
+            </div>
 
                         <div class="form-group col-md-12">
                             <input type="password" class="form-control" id="password" name="Password" placeholder="Password">
                         </div>
-						
-						
-						<img src="img/loading2.gif" alt="" style="width:40px;height:40px;text-align:center;display:none;" id="loading">
-						
-					</form>
-				
+            
+            
+            <img src="img/loading2.gif" alt="" style="width:40px;height:40px;text-align:center;display:none;" id="loading">
+            
+          </form>
+        
                     <div class="form-group col-md-12">
 
-                    	           <div class="alert alert-danger" style="display:none;"></div>
+                                 <div class="alert alert-danger" style="display:none;"></div>
         <div class="g-recaptcha" data-sitekey="6Ldn738UAAAAAN1pRaxhbDi4YbWMHmPzySkT8LoV"></div>
 </div>
 <br>
@@ -471,15 +471,15 @@ Services and Event Management</p>
                             <button type="submit" style="float:right;" id="submit" class="btn submit_btn form-control org_btn">Sign in</button>
                           
                         </div>
-				</div>
-			</div>
+        </div>
+      </div>
         </section>
         <!--================End Home Contact Area =================-->
         
         <!--================Latest Blog Area =================-->
       
         
-        <!--================ start footer Area  =================-->	
+        <!--================ start footer Area  =================-->  
        
 
  
@@ -487,7 +487,7 @@ Services and Event Management</p>
 
 
  <div id="ajax_cather"></div>
-		<!--================ End footer Area  =================-->
+    <!--================ End footer Area  =================-->
         
         
         
@@ -520,8 +520,8 @@ grecaptcha.execute('6LeZLX8UAAAAAPTRMs4fxY5qtNFw2d2PiaKmDGcN', {action: 'action_
 // Verify the token on the server.
 });
 });
-			
-		
+      
+    
 
 
 
@@ -621,7 +621,7 @@ $("#password").keydown(function (e){
                     $(".alert").show();
                 }
                 else if(grecaptcha.getResponse().length == 0)
-	            {
+              {
                      $('.alert').html('Please fill up recaptcha!');
                     $(".alert").show();
                 }
@@ -660,12 +660,12 @@ $("#password").keydown(function (e){
 
 
         $(document).ready(function(){
-        	$("#submit").click(function(){
+          $("#submit").click(function(){
 
-        		var username = $("#username").val();
-        		var password = $("#password").val();
+            var username = $("#username").val();
+            var password = $("#password").val();
 
-				if(username == "")
+        if(username == "")
                 {
 
                     $('.alert').html('Please enter username');
@@ -679,11 +679,12 @@ $("#password").keydown(function (e){
                     $(".alert").show();
                 }
                 
-                 else if(grecaptcha.getResponse().length == 0)
-	            {
+               /*  else if(grecaptcha.getResponse().length == 0)
+              {
                      $('.alert').html('Please fill up recaptcha!');
                     $(".alert").show();
                 }
+                */
                 else
                 {
 
@@ -705,7 +706,7 @@ $("#password").keydown(function (e){
                 }
 
 
-        	});
+          });
 
         });
 

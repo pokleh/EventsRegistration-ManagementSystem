@@ -124,7 +124,7 @@ $rowEv = $connection->query("SELECT * FROM completedevents WHERE id = '$rid'")->
                  <option value="christening">Christening</option>
                 <option value="wedding">Wedding</option>
             </select>
-        </div>
+        </div> 
         <br>
         <div class="form-group">
             Upload images for gallery:

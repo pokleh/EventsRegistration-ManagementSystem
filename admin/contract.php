@@ -215,7 +215,7 @@ $(document).ready(function(){
             success:function(data)
             {
                 $("#printTable").html(data);
-                $(".print").click();
+                $(".prirint").click();
 
                 
             }

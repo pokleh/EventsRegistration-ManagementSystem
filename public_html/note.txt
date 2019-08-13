@@ -1,0 +1,2 @@
+change the database name in 
+admin/php/packageincluded.php when you upload to hosting

@@ -34,7 +34,7 @@
             <div class="container">
                 <div class="row about_inner">
                     <div class="col-lg-12">
-                      <center><h3>Verify your email! An activation link was sent to <?php echo $_GET['email'] ?></h3>
+                      <center><h3>Verify your email! An Activation Code Is Sent To <?php echo $_GET['email'] ?></h3>
 
                                 <h3>It will take up to 5 minutes to receive your email. Please always check your inbox</h3>
                       </center>  

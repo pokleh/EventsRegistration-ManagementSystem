@@ -259,7 +259,8 @@ else
                      curveType: 'function',
                   legend: { position: 'bottom' },
                  
-                   bars: 'horizontal'
+                   bars: 'horizontal',
+           
                   
                      };  
             var chart = new google.charts.Bar(document.getElementById('piechart2'));

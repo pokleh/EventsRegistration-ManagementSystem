@@ -50,7 +50,8 @@
                     <div class="col-lg-2 col-md-2 footer-social">
                          <h6 class="footer_title">Follow us on facebook</h6>
                         <a href="https://www.facebook.com/fabeventsRA/"><i class="fa fa-facebook"></i> </a>
-                           
+                            
+                            <img src="img/newpayment2.jpg" alt="" style="width:250px;margin-top:100px;">
                     </div>
 
 

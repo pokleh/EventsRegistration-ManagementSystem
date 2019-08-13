@@ -15,7 +15,7 @@ echo "<script>
 
 
 $('#totalCount').val($totalCount);
-alert();
+
 </script>";
 
 ?>

@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<?php
+
+session_start();
+if(!isset($_SESSION['userName']))
+{
+    header("location:../index");
+}
+if(isset($_SESSION['user']))
+{
+    header("location:../fabeventsdashboard");
+}
+  
+include('php/connection.php');
+ ?>
+<html lang="en">
+
+<head>
+ 
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>FAB EVENTS - System Admin</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- MetisMenu CSS -->
+    <link href="css/metisMenu.min.css" rel="stylesheet">
+
+    <!-- DataTables CSS -->
+    <link href="css/dataTables.bootstrap.css" rel="stylesheet">
+
+    <!-- DataTables Responsive CSS -->
+    <link href="css/dataTables.responsive.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/sb-admin-2.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body>
+
+    <div id="wrapper">
+   <!-- Navigation -->
+      <?php include('php/navbar.php'); ?>
+
+
+        <div id="page-wrapper">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h1 class="page-header">Themes</h1>
+                </div>
+                <!-- /.col-lg-12 -->
+
+
+            </div>
+            <!-- /.row -->
+            <div class="row">
+                <div class="col-lg-12">
+
+                        <?php if(isset($_SESSION['deleted'])){ ?>
+                      <div class="alert alert-success"><?php echo $_SESSION['deleted'] ?></div> <?php } unset($_SESSION['deleted']); ?>
+                        <?php if(isset($_SESSION['update'] )) { ?>
+                    <div class="alert alert-success"><?php echo  $_SESSION['update'] ; ?></div>
+                    <?php } unset($_SESSION['update'] ); ?>
+
+                    <div class="panel panel-default">
+
+                        <div class="panel-heading">
+                              <a href="addtheme"><span class="fa fa-plus-circle"></span> Add Theme</a>
+                        </div>
+                        <!-- /.panel-heading -->
+                        <div class="panel-body">
+                            
+                            <a href="themes" class="btn btn-info btn-small filter" style="width:100px;">All</a>
+                           	<a href="themes?category=birthday" style="width:100px;"class="btn btn-info btn-small filter">Birthday</a>
+                           	<a href="themes?category=christening" style="width:100px;"class="btn btn-info btn-small filter">Christening</a>
+                           	 	<a href="themes?category=debut" style="width:100px;"class="btn btn-info btn-small filter">Debut</a>
+                           	 	 	<a href="themes?category=wedding" style="width:100px;"class="btn btn-info btn-small filter">Wedding</a>
+                           	 	 	<a href="themes?category=others" style="width:100px;"class="btn btn-info btn-small filter">Others</a>
+                              
+                              
+                              
+
+
+
+
+
+<br><br><br>
+
+<div id="table-container">
+
+ <table width="100%" class="table table-striped table-bordered table-hover" id="dataTables-example">
+
+
+<thead>
+                <tr>			
+                	 		 <th>Category</th>
+                               <th>Theme</th>
+                              
+
+									<?php
+
+
+									if(isset($_GET['category']))
+											{
+												if($_GET['category'] == "birthday")
+														{
+															echo "<th> Sex </th>";
+														}
+											}
+									 ?>
+
+
+
+
+                                <th>Action</th>
+                             
+                             
+                             
+                            </tr>
+
+      </thead>    
+
+
+                            <?php
+
+if(isset($_GET['category']))
+{
+
+
+$category = $_GET['category'];
+$select1 = "SELECT * FROM theme WHERE category = '$category' ORDER BY theme ASC";
+
+}
+else
+{
+$select1 = "SELECT * FROM theme ORDER BY theme ASC";
+}
+
+                                $result1 = $connection->query($select1);
+                                if($result1->num_rows > 0)
+                                {
+                                while($row1 = $result1->fetch_assoc())
+                                {
+
+                             ?>
+                                
+							<tr>
+								<td><?php echo ucwords($row1['category']) ?></td>
+								<td><?php echo ucwords($row1['theme']) ?></td>
+								
+								<?php 
+
+
+									if(isset($_GET['category']))
+											{
+												if($_GET['category'] == "birthday")
+														{
+															echo "<td>" . $row1['sex'] . "</td>";
+														}
+											}
+
+								?>
+
+
+								<td style="text-align:center;">
+									<a href="edittheme?id=<?php echo $row1['id'] ?>" class="btn btn-warning btn-sm">Edit</a>
+				<a href="deletetheme?id=<?php echo $row1['id'] ?>" style="cursor:pointer;" class="btn btn-danger btn-sm delete">Delete</a>
+
+								</td>
+							</tr>
+                                   
+                             <?php }
+                                }
+                                
+                              ?>
+
+
+
+
+
+
+
+
+
+                  
+</table>
+
+</div>
+
+
+
+
+
+<div id="ajax_catcher"></div>
+
+
+
+                               
+        </div>
+        <!-- /#page-wrapper -->
+
+    </div>
+    <!-- /#wrapper -->
+
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- Metis Menu Plugin JavaScript -->
+    <script src="js/metisMenu.min.js"></script>
+
+    <!-- DataTables JavaScript -->
+    <script src="js/jquery.dataTables.min.js"></script>
+    <script src="js/dataTables.bootstrap.min.js"></script>
+    <script src="js/dataTables.responsive.js"></script>
+
+    <!-- Custom Theme JavaScript -->
+    <script src="js/sb-admin-2.js"></script>
+
+    <!-- Page-Level Demo Scripts - Tables - Use for reference -->
+    <script>
+    $(document).ready(function() {
+        $('#dataTables-example').DataTable({
+            responsive: true
+        });
+    });
+
+   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+
+</body>
+
+</html>

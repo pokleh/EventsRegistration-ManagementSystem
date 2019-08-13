@@ -11,7 +11,7 @@ if(isset($_SESSION['user']))
     header("location:../fabeventsdashboard");
 }
   
-
+ 
 include('php/connection.php');
 
 $delete = "DELETE  FROM packageincluded WHERE status = '' ";
@@ -145,7 +145,7 @@ body{
 
         <img src="../img/notfound.png" alt="img" id="blah" style="width:400px;height:300px;margin-left:150px;">
         <br>
-        <br>
+        <br> 
         <form action="addevent" method="post" enctype="multipart/form-data" style="margin-left:150px;">
             <p>Upload new photo</p>
             <input type="file" name="image" id="image" class="" onchange="readURL(this);" accept=".jpg, .png, .jpeg">
@@ -333,7 +333,7 @@ setInterval(intArray,1000);
 
 
 
-
+ 
 
 
     $(document).ready(function() {

@@ -1,10 +1,10 @@
 <?php
 
 
-$host = "localhost";
-$username = "id7989606_fabeventsbeta";
-$password = "1234567890";
-$dbname = "id7989606_fabeventsbeta";
+$host = "162.253.224.15";
+$username = "revex10h";
+$password = "sv6eFx23";
+$dbname = "revex10h_fab";
 
 
 $connection = new mysqli($host,$username,$password,$dbname);
